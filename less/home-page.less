@@ -17,13 +17,13 @@
   .space-images {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: @w;
 
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
-      height: 100%;
+      height: @w;
     }
   }
 
@@ -57,8 +57,7 @@
         margin-bottom: 26px;
       }
 
-      .btn {
-      }
+ 
     }
 
     .walk-img {
@@ -66,10 +65,69 @@
       margin-left: 4%;
       
       img {
-        width: 100%;
+        width: @w;
         height: auto;
         border-radius: 10px;
       }
     }
   }
-}// home
+}
+
+// Button Section
+
+.myButton {
+  .button(Arial,17px)
+}
+
+.header-img {
+  margin-top: 10rem;
+  width: @w;
+  
+}
+
+@media @phone {
+	.myButton {
+
+		padding: 20px 195px;
+    font-stretch: condensed;
+    
+	}
+}
+
+@media @phone {
+  .header-img{
+    width: @w;
+  }
+
+// Home Page mid & bottom images
+
+  .home .space-images {
+    .blast {
+      width: @w;
+    }
+    .sky{
+      .no;
+    }
+    .launch{
+      .no;
+    }
+  }
+
+  img {
+    width: @w;
+    border-radius: 12px;
+  }
+  .home .walk {
+    flex-direction: column-reverse;
+    padding: 15px;
+  
+    .walk-img {
+      width: @w;
+      margin-left: 0%;
+  }
+    .walk-text {
+      padding-top:15px;
+      width: @w;
+    }
+  }      
+}

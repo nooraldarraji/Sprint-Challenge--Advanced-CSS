@@ -1,1 +1,63 @@
 // Navigation code here
+// .container .nav-container {
+//   margin: 0;
+// }
+
+// Done for Desktop and Mobile.
+
+.main-navigation {
+    width: @w;
+    height: 90px;
+    background: @nav-bg;
+    position: fixed;
+    top: 0;
+  
+    .nav-container {
+
+      height: @w;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin: 0;
+      border-top: 3px solid @main-border-color;
+
+      .logo-heading {
+        font-size: 4rem;
+        padding-bottom: 10px;
+      }
+    
+      @media @phone {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 10px;
+      }
+  
+      .logo-heading {
+        @media @phone {
+          font-size: 3rem;
+          font-family: @nav-font;
+        }
+      }
+  
+      .nav {
+        width: 350px;
+        display: flex;
+        justify-content: space-evenly;
+  
+        @media @phone {
+          width: @w;
+          justify-content: space-around;
+        }
+        
+        
+        a {
+          font-size: 1.6rem;
+          color: @main-font-color;
+          text-decoration: none;
+        }
+      }
+    }
+  } 
+  
